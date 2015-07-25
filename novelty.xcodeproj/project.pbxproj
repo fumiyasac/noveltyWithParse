@@ -32,7 +32,7 @@
 		DE0948971B5F0B7600E9EF87 /* no_image.gif in Resources */ = {isa = PBXBuildFile; fileRef = DE0948961B5F0B7600E9EF87 /* no_image.gif */; };
 		DE09489A1B5F0B9900E9EF87 /* novelListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0948981B5F0B9900E9EF87 /* novelListCell.swift */; };
 		DE09489B1B5F0B9900E9EF87 /* novelListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE0948991B5F0B9900E9EF87 /* novelListCell.xib */; };
-		DE3A2D3D1B613042009897D6 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3A2D3C1B613042009897D6 /* ParseUI.framework */; };
+		DE3A2D411B63550C009897D6 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3A2D401B63550C009897D6 /* ParseUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +75,7 @@
 		DE0948961B5F0B7600E9EF87 /* no_image.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = no_image.gif; sourceTree = "<group>"; };
 		DE0948981B5F0B9900E9EF87 /* novelListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = novelListCell.swift; sourceTree = "<group>"; };
 		DE0948991B5F0B9900E9EF87 /* novelListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = novelListCell.xib; sourceTree = "<group>"; };
-		DE3A2D3C1B613042009897D6 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		DE3A2D401B63550C009897D6 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = novelty/ParseUI.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,13 +89,13 @@
 				DE09488E1B5D692100E9EF87 /* libz.dylib in Frameworks */,
 				DE09488C1B5D691800E9EF87 /* SystemConfiguration.framework in Frameworks */,
 				DE09488A1B5D690C00E9EF87 /* StoreKit.framework in Frameworks */,
+				DE3A2D411B63550C009897D6 /* ParseUI.framework in Frameworks */,
 				DE0948881B5D690300E9EF87 /* Security.framework in Frameworks */,
 				DE0948861B5D68F600E9EF87 /* QuartzCore.framework in Frameworks */,
 				DE0948841B5D68EC00E9EF87 /* CoreLocation.framework in Frameworks */,
 				DE0948821B5D68E300E9EF87 /* CoreGraphics.framework in Frameworks */,
 				DE0948801B5D68DA00E9EF87 /* CFNetwork.framework in Frameworks */,
 				DE09487E1B5D68D100E9EF87 /* AudioToolbox.framework in Frameworks */,
-				DE3A2D3D1B613042009897D6 /* ParseUI.framework in Frameworks */,
 				DE09487C1B5D688300E9EF87 /* Parse.framework in Frameworks */,
 				DE09487B1B5D688300E9EF87 /* Bolts.framework in Frameworks */,
 			);
@@ -187,7 +187,7 @@
 			children = (
 				DE0948791B5D688300E9EF87 /* Bolts.framework */,
 				DE09487A1B5D688300E9EF87 /* Parse.framework */,
-				DE3A2D3C1B613042009897D6 /* ParseUI.framework */,
+				DE3A2D401B63550C009897D6 /* ParseUI.framework */,
 			);
 			name = Parse;
 			sourceTree = "<group>";

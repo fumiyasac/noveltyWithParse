@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AD01BDD3-92A5-485C-BFDE-0A8657D2FE72</string>
+	<key>IDESourceControlProjectName</key>
+	<string>novelty</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9CEAB9DE325A85756B8EEBD95AF2BE715744FB3A</key>
+		<string>github.com:fumiyasac/noveltyWithParse.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>novelty.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9CEAB9DE325A85756B8EEBD95AF2BE715744FB3A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:fumiyasac/noveltyWithParse.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9CEAB9DE325A85756B8EEBD95AF2BE715744FB3A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9CEAB9DE325A85756B8EEBD95AF2BE715744FB3A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>novelty</string>
+		</dict>
+	</array>
+</dict>
+</plist>
