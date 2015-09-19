@@ -34,7 +34,7 @@ class LoginController: UIViewController, PFLogInViewControllerDelegate, PFSignUp
         if segue.identifier == "Synopsis"{
             
             //遷移先のコントローラーの変数を用意する
-            var noveltyController = segue.destinationViewController as! NoveltyController
+            let noveltyController = segue.destinationViewController as! NoveltyController
             
             //遷移先のコントローラーに渡したい変数を格納（型を合わせてね）
             noveltyController.novelData = sender
@@ -78,18 +78,11 @@ class LoginController: UIViewController, PFLogInViewControllerDelegate, PFSignUp
         //LogInViewControllerをカスタマイズする（ParseUI.frameworkで提供されているもの）
         let login = PFLogInViewController()
         login.delegate = self
-        login.fields = (PFLogInFields.UsernameAndPassword
-            | PFLogInFields.LogInButton
-            | PFLogInFields.SignUpButton
-            | PFLogInFields.PasswordForgotten
-            | PFLogInFields.DismissButton)
+        login.fields = ([PFLogInFields.UsernameAndPassword, PFLogInFields.LogInButton, PFLogInFields.SignUpButton, PFLogInFields.PasswordForgotten, PFLogInFields.DismissButton])
         
         //SignUpViewControllerをカスタマイズする（ParseUI.frameworkで提供されているもの）
         let signup = PFSignUpViewController()
-        signup.fields = (PFSignUpFields.UsernameAndPassword
-            | PFSignUpFields.SignUpButton
-            | PFSignUpFields.Email
-            | PFSignUpFields.DismissButton)
+        signup.fields = ([PFSignUpFields.UsernameAndPassword, PFSignUpFields.SignUpButton, PFSignUpFields.Email, PFSignUpFields.DismissButton])
         signup.delegate = self
         login.signUpController = signup
         
@@ -129,11 +122,11 @@ class LoginController: UIViewController, PFLogInViewControllerDelegate, PFSignUp
     }
     
     func logInViewController(logInController: PFLogInViewController, didFailToLogInWithError error: NSError?) {
-        println("Failed to log in...")
+        print("Failed to log in...")
     }
     
     func logInViewControllerDidCancelLogIn(logInController: PFLogInViewController) {
-        println("User dismissed the logInViewController")
+        print("User dismissed the logInViewController")
     }
     
     //PFSignUpViewControllerDelegateのメソッド
@@ -142,7 +135,7 @@ class LoginController: UIViewController, PFLogInViewControllerDelegate, PFSignUp
             
         //パスワードは8文字以上でお願いします
         if let password = info["password"] as? String {
-            return count(password.utf16) >= 8
+            return password.utf16.count >= 8
         } else {
             return false
         }
@@ -157,7 +150,7 @@ class LoginController: UIViewController, PFLogInViewControllerDelegate, PFSignUp
     }
     
     func signUpViewController(signUpController: PFSignUpViewController, didFailToSignUpWithError error: NSError?) {
-        println("Failed to sign up...")
+        print("Failed to sign up...")
     }
     
     override func didReceiveMemoryWarning() {

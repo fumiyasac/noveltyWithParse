@@ -44,7 +44,7 @@ class SelectController: UIViewController, UITableViewDelegate, UITableViewDataSo
         self.novelTable.dataSource = self
         
         //Xibのクラスを読み込む宣言を行う
-        var nib:UINib = UINib(nibName: "novelListCell", bundle: nil)
+        let nib:UINib = UINib(nibName: "novelListCell", bundle: nil)
         self.novelTable.registerNib(nib, forCellReuseIdentifier: "novelListCell")
         
         //Parseからのデータを取得してテーブルに表示する
@@ -81,7 +81,7 @@ class SelectController: UIViewController, UITableViewDelegate, UITableViewDataSo
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         //Xibファイルを元にデータを作成する
-        var cell = tableView.dequeueReusableCellWithIdentifier("novelListCell") as? novelListCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("novelListCell") as? novelListCell
         let novel : AnyObject = novelData.objectAtIndex(indexPath.row)
         
         //各値をセルに入れる
@@ -112,7 +112,7 @@ class SelectController: UIViewController, UITableViewDelegate, UITableViewDataSo
         if segue.identifier == "Login"{
             
             //遷移先のコントローラーの変数を用意する
-            var loginController = segue.destinationViewController as! LoginController
+            let loginController = segue.destinationViewController as! LoginController
             
             //遷移先のコントローラーに渡したい変数を格納（型を合わせてね）
             loginController.novelData = sender
@@ -131,7 +131,7 @@ class SelectController: UIViewController, UITableViewDelegate, UITableViewDataSo
         novelData.removeAllObjects()
         
         //parse.comのデータベースからデータを取得する
-        var query:PFQuery = PFQuery(className: "Novel")
+        let query:PFQuery = PFQuery(className: "Novel")
         //whereKeyメソッドで検索条件を指定
         query.whereKey("category", containsString: "小説")
         //orderByAscendingでカラムに対して昇順で並べる指定
