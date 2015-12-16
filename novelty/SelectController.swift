@@ -15,6 +15,9 @@ Parse導入の事前準備
 ・Bolt.framework
 ・ParseUI.framework(Parse.comが提供しているログインのUIを使う場合)
 (2)Build SettingからFrameworkを追加します。（Objective-CとSwiftだとフレームワークの数が違いますので注意）
+
+※更新履歴：
+2015/12/16 Parseのバージョンをv1.7.5 → v1.11.0(この時点での最新版)にしました。
 ------------------ */
 
 //Parseのインポート
@@ -44,7 +47,7 @@ class SelectController: UIViewController, UITableViewDelegate, UITableViewDataSo
         self.novelTable.dataSource = self
         
         //Xibのクラスを読み込む宣言を行う
-        var nib:UINib = UINib(nibName: "novelListCell", bundle: nil)
+        let nib:UINib = UINib(nibName: "novelListCell", bundle: nil)
         self.novelTable.registerNib(nib, forCellReuseIdentifier: "novelListCell")
         
         //Parseからのデータを取得してテーブルに表示する
@@ -81,7 +84,7 @@ class SelectController: UIViewController, UITableViewDelegate, UITableViewDataSo
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         //Xibファイルを元にデータを作成する
-        var cell = tableView.dequeueReusableCellWithIdentifier("novelListCell") as? novelListCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("novelListCell") as? novelListCell
         let novel : AnyObject = novelData.objectAtIndex(indexPath.row)
         
         //各値をセルに入れる
@@ -112,7 +115,7 @@ class SelectController: UIViewController, UITableViewDelegate, UITableViewDataSo
         if segue.identifier == "Login"{
             
             //遷移先のコントローラーの変数を用意する
-            var loginController = segue.destinationViewController as! LoginController
+            let loginController = segue.destinationViewController as! LoginController
             
             //遷移先のコントローラーに渡したい変数を格納（型を合わせてね）
             loginController.novelData = sender
@@ -131,31 +134,52 @@ class SelectController: UIViewController, UITableViewDelegate, UITableViewDataSo
         novelData.removeAllObjects()
         
         //parse.comのデータベースからデータを取得する
-        var query:PFQuery = PFQuery(className: "Novel")
+        let query:PFQuery = PFQuery(className: "Novel")
         //whereKeyメソッドで検索条件を指定
         query.whereKey("category", containsString: "小説")
         //orderByAscendingでカラムに対して昇順で並べる指定
         query.orderByAscending("createdAt")
         
         //クロージャーの中で上記の検索条件に該当するオブジェクトを取得する
-        query.findObjectsInBackgroundWithBlock({
+        query.findObjectsInBackgroundWithBlock {
+            (objects:[PFObject]?, error:NSError?) -> Void in
             
-            (objects:[AnyObject]?, error:NSError?) -> Void in
-            
-            for object in (objects as! [PFObject]) {
+            //------ クロージャー内の処理：ここから↓ -----
+            //エラーがないかの確認
+            if error == nil {
                 
-                if(error == nil){
-                    //取得したオブジェクトをメンバ変数へ格納
-                    self.novelData.addObject(object)
+                //正常処理（登録データあり）
+                print("小説データが\(objects!.count)件あります！")
+                
+                //データが存在する場合はNSMutableArrayへデータを格納
+                if let objects = objects {
+                    
+                    for object in objects {
+                        
+                        //該当データのUniqueなID(Optional値)
+                        print(object.objectId)
+                        
+                        //取得したオブジェクトをメンバ変数へ格納
+                        self.novelData.addObject(object)
+                    }
+                    //Debug.
+                    //print(self.novelData)
+                    
+                    //テーブルビューをリロードする
+                    self.novelTable.reloadData()
+                    
+                } else {
+                    print("小説データがありませんでした！")
                 }
+                
+            } else {
+                //異常処理の際にはエラー内容の表示
+                print("Error: \(error!) \(error!.userInfo)")
             }
             
-            //Debug.
-            //println(self.novelData)
-            
-            //テーブルビューをリロードする
-            self.novelTable.reloadData()
-        })
+        }
+        //------ クロージャー内の処理：ここまで↑ -----
+        
     }
     
     override func didReceiveMemoryWarning() {
