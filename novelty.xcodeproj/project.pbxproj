@@ -25,14 +25,14 @@
 		DE0948881B5D690300E9EF87 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0948871B5D690300E9EF87 /* Security.framework */; };
 		DE09488A1B5D690C00E9EF87 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0948891B5D690C00E9EF87 /* StoreKit.framework */; };
 		DE09488C1B5D691800E9EF87 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE09488B1B5D691800E9EF87 /* SystemConfiguration.framework */; };
-		DE09488E1B5D692100E9EF87 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DE09488D1B5D692100E9EF87 /* libz.dylib */; };
-		DE0948901B5D692B00E9EF87 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DE09488F1B5D692B00E9EF87 /* libsqlite3.dylib */; };
 		DE0948921B5D698B00E9EF87 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0948911B5D698B00E9EF87 /* Accounts.framework */; };
 		DE0948941B5D699B00E9EF87 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0948931B5D699B00E9EF87 /* Social.framework */; };
 		DE0948971B5F0B7600E9EF87 /* no_image.gif in Resources */ = {isa = PBXBuildFile; fileRef = DE0948961B5F0B7600E9EF87 /* no_image.gif */; };
 		DE09489A1B5F0B9900E9EF87 /* novelListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0948981B5F0B9900E9EF87 /* novelListCell.swift */; };
 		DE09489B1B5F0B9900E9EF87 /* novelListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE0948991B5F0B9900E9EF87 /* novelListCell.xib */; };
 		DE3A2D411B63550C009897D6 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3A2D401B63550C009897D6 /* ParseUI.framework */; };
+		DEDAF2B41C22247500A3FFB6 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDAF2B31C22247500A3FFB6 /* libsqlite3.tbd */; };
+		DEDAF2B61C22248800A3FFB6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDAF2B51C22248800A3FFB6 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,14 +68,14 @@
 		DE0948871B5D690300E9EF87 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		DE0948891B5D690C00E9EF87 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DE09488B1B5D691800E9EF87 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		DE09488D1B5D692100E9EF87 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		DE09488F1B5D692B00E9EF87 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		DE0948911B5D698B00E9EF87 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		DE0948931B5D699B00E9EF87 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		DE0948961B5F0B7600E9EF87 /* no_image.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = no_image.gif; sourceTree = "<group>"; };
 		DE0948981B5F0B9900E9EF87 /* novelListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = novelListCell.swift; sourceTree = "<group>"; };
 		DE0948991B5F0B9900E9EF87 /* novelListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = novelListCell.xib; sourceTree = "<group>"; };
 		DE3A2D401B63550C009897D6 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = novelty/ParseUI.framework; sourceTree = "<group>"; };
+		DEDAF2B31C22247500A3FFB6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		DEDAF2B51C22248800A3FFB6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +83,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEDAF2B61C22248800A3FFB6 /* libz.tbd in Frameworks */,
+				DEDAF2B41C22247500A3FFB6 /* libsqlite3.tbd in Frameworks */,
 				DE0948941B5D699B00E9EF87 /* Social.framework in Frameworks */,
 				DE0948921B5D698B00E9EF87 /* Accounts.framework in Frameworks */,
-				DE0948901B5D692B00E9EF87 /* libsqlite3.dylib in Frameworks */,
-				DE09488E1B5D692100E9EF87 /* libz.dylib in Frameworks */,
 				DE09488C1B5D691800E9EF87 /* SystemConfiguration.framework in Frameworks */,
 				DE09488A1B5D690C00E9EF87 /* StoreKit.framework in Frameworks */,
 				DE3A2D411B63550C009897D6 /* ParseUI.framework in Frameworks */,
@@ -197,8 +197,8 @@
 			children = (
 				DE0948931B5D699B00E9EF87 /* Social.framework */,
 				DE0948911B5D698B00E9EF87 /* Accounts.framework */,
-				DE09488F1B5D692B00E9EF87 /* libsqlite3.dylib */,
-				DE09488D1B5D692100E9EF87 /* libz.dylib */,
+				DEDAF2B51C22248800A3FFB6 /* libz.tbd */,
+				DEDAF2B31C22247500A3FFB6 /* libsqlite3.tbd */,
 				DE09488B1B5D691800E9EF87 /* SystemConfiguration.framework */,
 				DE0948891B5D690C00E9EF87 /* StoreKit.framework */,
 				DE0948871B5D690300E9EF87 /* Security.framework */,
